@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+
 }
 
 .container-produto, 
@@ -141,6 +142,10 @@
 
 @media screen and (max-width: 767px) {
 
+     #container-cardapio{
+        align-items: center;
+        justify-content: center;
+     }
     .container-produto, 
     .container-produto-nao-finalizado{
         width: 150px;
@@ -158,4 +163,14 @@
         border: 1px solid black;
     }
 
+
+    .info-produto > #filter{
+        display: none;
+    }
+    
+    .info-produto > #filter-placeholder{
+        width: 90%;
+        border-radius: 10px;
+        text-align: center;
+    }
 }
