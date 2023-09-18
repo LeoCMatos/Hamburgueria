@@ -13,7 +13,16 @@ Este projeto está atualmente em desenvolvimento ativo, e estou animado para com
 
 ### Capturas de Tela 
 
-[Inserir capturas de tela ou imagens relacionadas ao projeto]
+- **Imagens para Desktop
+<img src="https://github.com/LeoCMatos/Hamburgueria/blob/main/img/hamburgueria-home.PNG" style="width: 250px;">
+<img src="https://github.com/LeoCMatos/Hamburgueria/blob/main/img/hamburgueria-menu-edit-cardapio.PNG" style="width: 250px;">
+<img src="https://github.com/LeoCMatos/Hamburgueria/blob/main/img/hamburgueria-cadastrar-produto.PNG" style="width: 250px;">
+<img src="https://github.com/LeoCMatos/Hamburgueria/blob/main/img/hamburgueria-edit-produto.PNG" style="width: 250px;">
+- **Imagens para celular
+<img src="https://github.com/LeoCMatos/Hamburgueria/blob/main/img/cardapio%20responsivo.PNG" style="width: 140px;">
+<img src="https://github.com/LeoCMatos/Hamburgueria/blob/main/img/edit-cardapio-responsivo.PNG" style="width: 140px;">
+<img src="https://github.com/LeoCMatos/Hamburgueria/blob/main/img/cadastro-responsivo.PNG" style="width: 140px;">
+<img src="https://github.com/LeoCMatos/Hamburgueria/blob/main/img/Edit-responsivo.PNG" style="width: 140px;">
 
 ### Tecnologias Utilizadas
 
