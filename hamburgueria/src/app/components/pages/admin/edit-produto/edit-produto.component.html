@@ -1,0 +1,103 @@
+
+<div *ngIf="dadoHamburguer" class="container-router">
+
+    <form (submit)="salvarEdicao()" 
+    class="container-form">
+        <h1>Edição do Produto</h1>
+        <div  *ngIf="errorCamposPrenchidos">
+            <p class="error">Preencha todos os campos!</p>
+        </div>
+        <div class="form-group">
+            <label for="nome">Nome do produto:</label>
+            <input type="text" name="nome" id="nome" [value]="dadoHamburguer.Nome"  [(ngModel)]="dadoHamburguer.Nome" required>
+            
+        </div>
+        <div class="form-group">
+         
+                <label for="Descricao">Descrição do produto:</label>
+            
+
+            <textarea name="Descricao" id="Descricao" rows="2" [value]="dadoHamburguer.Descricao" [(ngModel)]="dadoHamburguer.Descricao" ></textarea>
+        </div>
+        <div class="form-group">
+            <label for="PrecoProd">Preço do produto:</label>
+            <input type="number" name="PrecoProd" id="PrecoProd" [value]="dadoHamburguer.Preco" [(ngModel)]="dadoHamburguer.Preco">
+        </div>
+        <div div class="form-group">
+            
+            <div class="form-group-select">
+                <label for="Categoria">Categoria:</label>
+                <select name="Categoria" id="Categoria" [(ngModel)]="dadoHamburguer.Categoria">
+                    <option value="Lanches" [selected]="dadoHamburguer.Categoria === 'Lanches'">Lanches</option>
+                    <option value="Bebidas" [selected]="dadoHamburguer.Categoria === 'Bebidas'">Bebidas</option>
+                    <option value="Acompanhamentos" [selected]="dadoHamburguer.Categoria === 'Acompanhamentos'">Acompanhamentos</option>
+                  </select>
+            </div>
+
+        </div>
+        
+        <div class="form-group">
+            <label for="Ingredientes">Ingredientes</label>
+        
+        <textarea name="Ingredientes" id="Ingredientes" rows="2" [value]="dadoHamburguer.Ingredientes" [(ngModel)]="dadoHamburguer.Ingredientes"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="Imagem">Imagem</label>
+            <input type="text" name="Imagem" id="Imagem" [value]="dadoHamburguer.Imagem" [(ngModel)]="dadoHamburguer.Imagem">
+        </div>
+        <div class="form-group">
+            <label for="tempo-preparo">Tempo de Preparo</label>
+            <input type="text" name="tempo-preparo" id="tempo-preparo" [value]="dadoHamburguer.Tempo_Preparo" [(ngModel)]="dadoHamburguer.Tempo_Preparo">
+        </div>
+        <div class="form-group">
+            <label for="Opcoes_Acompanhamento">Acompanhamentos</label>
+            <input type="text" name="Opcoes_Acompanhamento" id="Opcoes_Acompanhamento" [value]="dadoHamburguer.Opcoes_Acompanhamento" [(ngModel)]="dadoHamburguer.Opcoes_Acompanhamento">
+        </div>
+        <div class="form-group">
+            <label for="Calorias">Calorias</label>
+            <input type="text" name="Calorias" id="Calorias" [value]="dadoHamburguer.Calorias" [(ngModel)]="dadoHamburguer.Calorias">
+        </div>
+        <div class="form-group">
+        <div class="form-group-select">
+            <label class="select" for="promocao_do_dia">Promoção do dia</label>
+            <select name="promocao_do_dia" id="promocao_do_dia" [(ngModel)]="dadoHamburguer.promocao_do_dia">
+                <option value="Nenhum dia" [selected]="dadoHamburguer.promocao_do_dia === 'Nenhum dia'">Nenhum dia</option>
+                <option value="Segunda-Feira" [selected]="dadoHamburguer.promocao_do_dia === 'Segunda-Feira'">Segunda-Feira</option>
+                <option value="Terça-Feira" [selected]="dadoHamburguer.promocao_do_dia === 'Terça-Feira'">Terça-Feira</option>
+                <option value="Quarta-Feira" [selected]="dadoHamburguer.promocao_do_dia === 'Quarta-Feira'">Quarta-Feira</option>
+                <option value="Quinta-Feira" [selected]="dadoHamburguer.promocao_do_dia === 'Quinta-Feira'">Quinta-Feira</option>
+                <option value="Sexta-Feira" [selected]="dadoHamburguer.promocao_do_dia === 'Sexta-Feira'">Sexta-Feira</option>
+                <option value="Sabado" [selected]="dadoHamburguer.promocao_do_dia === 'Sabado-Feira'">Sabado</option>
+                <option value="Domingo" [selected]="dadoHamburguer.promocao_do_dia === 'Domingo-Feira'">Domingo</option>
+            </select>
+        </div>
+        <div class="form-group-select">
+            <label class="Ativar_Prod">Ativar produto:</label>
+            <select name="Disponibilidade" id="Ativar_Prod" [(ngModel)]="dadoHamburguer.Disponibilidade">
+                <option value="0" [selected]="dadoHamburguer.Disponibilidade === 0">Não</option>
+                <option value="1" [selected]="dadoHamburguer.Disponibilidade === 1">Sim</option>
+            </select>
+        </div>
+        <div class="form-group-select">
+            <label class="Ativar_Promocao">Ativar Promoção:</label>
+            <select name="Ativar_Promocao" id="Ativar_Promocao" [(ngModel)]="dadoHamburguer.Ativar_Promocao">
+                <option value="0" >Não</option>
+                <option value="1" >Sim</option>
+            </select>
+        </div>
+        </div>
+        <div class="form-group" *ngIf="dadoHamburguer.Ativar_Promocao === 1">
+            <label for="Promocao">Preço Promoção</label>
+            <input type="text" name="Promocao" id="Promocao" [value]="dadoHamburguer.Promocao" [(ngModel)]="dadoHamburguer.Promocao">
+        </div>
+
+
+        <div class="button">
+            <button class="save" type="submit">Salvar</button>
+            
+            <button class="delete" (click)="excluirRegistro()">Excluir</button>
+
+            <a class="back" routerLink="/menu/edit-cardapio">voltar</a>
+        </div>
+    </form>
+</div>

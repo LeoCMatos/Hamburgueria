@@ -1,0 +1,35 @@
+<div class="container">
+    <form class="container-form"  (submit)="insertBurguer()">
+        <div id="form">
+            <h2>Cadastro de Produtos</h2>
+            <div  *ngIf="errorCamposPrenchidos">
+                <p class="error">Preencha todos os campos!</p>
+            </div>
+
+            <div class="form-group">
+                <label for="Nome">Nome:</label>
+                <input type="text" id="Nome" [(ngModel)]="novoRegistro.Nome" name="Nome" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="Descricao">Descrição:</label>
+                <input type="text" id="Descricao" [(ngModel)]="novoRegistro.Descricao" name="Descricao" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="Preco">Preço:</label>
+                <input type="number" id="Preco" [(ngModel)]="novoRegistro.Preco" name="Preco" required>
+            </div>
+            <div class="form-group">
+                <label for="Categoria">Categoria:</label>
+                <select name="Categoria" id="Categoria" [(ngModel)]="novoRegistro.Categoria" required autocomplete="off">
+                    <option value="Lanches" selected>Lanches</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Acompanhamentos">Acompanhamentos</option>
+                </select>
+            </div>
+            <input type="submit" value="Enviar">
+            <a [routerLink]="['../edit-cardapio']" class="btn btn-primary">Voltar aos produtos</a>
+
+        </div>
+    </form>
+    
+</div>

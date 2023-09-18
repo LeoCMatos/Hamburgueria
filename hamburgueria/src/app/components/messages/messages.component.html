@@ -1,0 +1,9 @@
+<div class="message" *ngIf="messagesService.message">
+    <div class="message-header">
+        <h2>Mensagem do Sistema:</h2>
+        <button class="clear" (click)="messagesService.clear()">
+           X
+        </button>
+    </div>
+    <p> {{messagesService.message}}</p>
+</div>

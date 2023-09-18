@@ -1,0 +1,59 @@
+.container{
+    height: 799px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #FFA500, #FF6347); 
+}
+
+
+.container-form {
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+}
+#form {
+    margin: 15px;
+    text-align: center;
+}
+
+#form > h2 {
+    color: #ffa600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.411);
+}
+
+.form-group {
+    text-align: start;
+    margin: 10px 0;
+}
+
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background: linear-gradient(45deg, #FFA500, #FF6347);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background: linear-gradient(45deg, #FFA500, #FFA500);
+    transition: 0.7s;
+}
+
+.error{
+    color: red;
+}

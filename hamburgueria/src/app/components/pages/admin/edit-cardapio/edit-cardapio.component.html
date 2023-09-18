@@ -1,0 +1,57 @@
+<div id="container-cardapio" *ngIf="dadosHamburguer">
+     <div class="container-produto">
+        <div class="produto-img">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/7126739-icone-de-ponto-de-interrogacao-gratis-vetor.jpg" alt="">
+        </div>
+        <div class="info-produto">
+            <button id="ProdutoNovo" routerLink="/menu/cadastrar-produto">Adicionar Novo Produto</button>
+        </div>
+    </div>
+    <div class="container-produto">
+        <div class="produto-img">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/7126739-icone-de-ponto-de-interrogacao-gratis-vetor.jpg" alt="">
+        </div>
+        <div class="info-produto">
+            <label for="filter-placeholder" id="filter">Filtrar: </label>
+            <input type="text" id="filter-placeholder" placeholder="Digite o nome do produto">
+        </div>
+    </div>
+    <div *ngFor="let hamburguer of dadosHamburguer">
+        <div  *ngIf="hamburguer.NaoFinalizado === 0" class="container-produto-nao-finalizado
+        ">
+            <div class="produto-img">
+                <img src="https://img.freepik.com/vetores-premium/sinal-de-transito-de-atencao_92172-124.jpg?w=826">
+            </div>
+            <div class="info-produto">
+                <h2>{{hamburguer.Nome}}</h2>
+                <h3>Preço: {{hamburguer.Preco}}</h3>
+                <a routerLink="/menu/edit-produto/{{hamburguer.ID}}" id="edit" id="edit-finalizar">Finalizar Cadastro</a>
+            </div>
+        </div>
+    </div>
+
+    <div *ngFor="let hamburguer of dadosHamburguer">
+        <div  *ngIf="hamburguer.NaoFinalizado === 1" class="container-produto">
+            <div class="produto-img">
+                <img src="{{hamburguer.Imagem}}">
+            </div>
+            <div class="info-produto">
+                <h2>{{hamburguer.Nome}}</h2>
+                <h3 *ngIf="hamburguer.Ativar_Promocao === 0; else promoAtiva">Preço: {{ hamburguer.Preco }}</h3>
+
+                <ng-template #promoAtiva>
+                  <div *ngIf="(hamburguer.Preco - hamburguer.Promocao) > 0; else promoInvalida">
+                    <h3>De: <del>{{ hamburguer.Preco }}</del></h3>
+                    <h3>Por: {{ hamburguer.Promocao }}</h3>
+                  </div>
+                </ng-template>
+                
+                <ng-template #promoInvalida>
+                  <h3>Preço: {{ hamburguer.Preco }}</h3>
+                </ng-template>
+                <a routerLink="/menu/edit-produto/{{hamburguer.ID}}" id="edit">Editar</a>
+            </div>
+        </div>
+    </div>
+
+</div>

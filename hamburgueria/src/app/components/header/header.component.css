@@ -1,0 +1,80 @@
+.header{
+    background-image: linear-gradient(to right, #FBBE36, #FBBE36);
+    height: 10vh;
+    display: flex;
+}
+
+.container-nav{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    width: 33%;
+}
+
+#letreiro{
+    width: 33%;
+    display: flex;
+    background-image: linear-gradient(to right, #FF0000, #FFFF00, #FF0000); 
+    background-clip: text; 
+    color: transparent; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.178);
+}
+
+img{
+    width: 75px;
+    height: 75px;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+   margin: 40px 10px;
+}
+
+a{
+    color: white;
+    transition: 0.5s;
+    font-family: 'Bangers', sans-serif;
+}
+
+a:hover{
+    color: #E7272D;
+    transition: 0.5s;
+}
+
+.container{
+    margin: auto;
+    width: 100%;
+    min-height: 85vh;
+    background-color: #EDEDED;
+}
+
+.router{
+    width: 82vw;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+
+    .router{
+        width: 100vw;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .router{
+        width: 100vw;
+        height: 80vh;
+    }
+
+}

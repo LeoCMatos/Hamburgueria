@@ -1,0 +1,56 @@
+.menu-container{
+    display: flex;
+    margin-top: 10px;
+    height: 801px;
+    border: 1px solid rgba(0, 0, 0, 0.356);
+}
+
+nav{
+    border-right: 1px solid rgba(0, 0, 0, 0.356);
+}
+
+li{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.356);
+    
+    width: 150px;
+    text-align: center;
+    background-color: bisque;
+    color: black;
+}
+
+li > a > div {
+    color: black;
+    width: 100%;
+}
+
+li > a > div:hover{
+    color: #FF6347;
+}
+
+li#ultimo{
+    border-bottom: none;
+}
+
+
+.router{
+    height: 800px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 767px) {
+
+    .menu-container{
+        height: 801px;
+        border: 1px solid rgba(0, 0, 0, 0.356);
+        flex-direction: column;
+        }
+    
+    li{
+        width: 100%;
+    }
+    
+    .router{
+        height: auto;
+    }
+} 
