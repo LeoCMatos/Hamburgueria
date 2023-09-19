@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Athiti:400,500,600');
+
+.top-navbar{
+    z-index: 10;
+    width: 100%;
+    font-family: 'Athiti', sans-serif;
+    background-color: #F8F9FA;
+}
+
+.container{
+    padding: 15px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    width: 200px;
+    height: 55px;
+}
+
+.navbar-toggle{
+    display: none;
+}
+
+.navbar-nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px 0px;
+}
+
+.buttom-direct{
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1.2em;
+    color: black;
+}
+
+.active{
+    background-color: #FBBAAC;
+    color: white;
+}
+
+.buttom-direct:hover{
+    background-color: #FBBAAC;
+    color: white;
+}

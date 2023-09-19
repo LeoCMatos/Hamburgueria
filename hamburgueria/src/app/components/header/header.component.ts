@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, Navigation, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  isHomePage = false
+  isMenuPage = false
+
+  constructor(private router: Router){}
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if(event instanceof NavigationEnd){
+        this.isHomePage = event.url === '/cardapio'
+        this.isMenuPage = event.url === '/menu'
+      }
+    })
+  }
 
 }

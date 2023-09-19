@@ -1,12 +1,18 @@
 <header class="top-navbar">
     <nav class="navbar">
         <div class="container">
-            <a href="">
-                <img src="../../../img/burguerart.png" alt="logo burguer art">
+            <a routerLink="/cardapio">
+                <img id="logo" src="https://raw.githubusercontent.com/LeoCMatos/Hamburgueria/main/hamburgueria/src/img/burguerart.png" alt="logo burguer art">
             </a>
-            <button>
+            <button class="navbar-toggle">
                 <span>button burguer</span>
             </button>
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"> <a class="buttom-direct" routerLink="/cardapio" [ngClass]="{'active': isHomePage}">Home</a></li>
+                    <li class="nav-item"><a class="buttom-direct" routerLink="/menu" [ngClass]="{'active': isMenuPage}">Cardapio</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
