@@ -156,9 +156,9 @@
     }
     
     .card{
-        width: 180px;
-        height: 250px;
-        margin: 10px 6px;
+        width: 170px;
+        height: 210px;
+        margin: 10px 5px;
     }
 
     .card-description{
@@ -182,19 +182,19 @@
     }
     
     .card-img > img{
-        width: 100%;
+        width: 100px;
+        height: 100px;
     }
-    
      
     .card-info > h2{
         font-size: 1em;
         color: black;
         text-align: center;
-        height: 30px;
+        height: 40px;
     }
 
     .card-info{
-        height: 30px;
+        height: 40px;
     }
     .card-price{
         height: 10px;
