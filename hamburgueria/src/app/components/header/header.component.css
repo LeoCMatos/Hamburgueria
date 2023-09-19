@@ -5,10 +5,10 @@
     width: 100%;
     font-family: 'Athiti', sans-serif;
     background-color: #F8F9FA;
+    position: fixed;
 }
 
 .container{
-    padding: 15px 0px;
     display: flex;
     flex-wrap: wrap;
     width: 60%;
