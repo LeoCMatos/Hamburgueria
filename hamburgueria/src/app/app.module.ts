@@ -19,6 +19,7 @@ import { EditProdutoComponent } from './components/pages/admin/edit-produto/edit
 import { MessagesComponent } from './components/messages/messages.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/pages/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { HomeComponent } from './components/pages/home/home.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
