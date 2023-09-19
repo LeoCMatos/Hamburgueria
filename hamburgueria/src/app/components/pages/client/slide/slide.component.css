@@ -34,14 +34,3 @@ img{
     margin: auto;
 }
 
-.linkcardapio{
-    border: 1px solid #FBBAAC;
-    border-radius: 5px;
-    padding: 15px 25px;
-    font-size: 0.4em;
-    color: white;
-}
-
-.linkcardapio:hover{
-    background-color: #FBBAAC;
-}
