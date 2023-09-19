@@ -1,0 +1,32 @@
+<div *ngIf="dadosHamburguer">
+    <div class="cardapio-container" >
+        <div *ngFor="let hamburguer of dadosHamburguer">
+        <div class="card" *ngIf="hamburguer.Disponibilidade === 1 && hamburguer.Categoria === 'Lanches'">
+            <div class="card-container">
+                <div class="card-img">
+                    <img src={{hamburguer.Imagem}}>
+                </div>
+                <div class="card-info">
+                    <h2 class="card-title">{{hamburguer.Nome}}</h2>
+                    <h3 class="card-description">{{hamburguer.Descricao}}</h3>
+                </div>
+                <div class="card-price" *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
+                    <p >R$: {{hamburguer.Preco}}  </p>     
+
+                </div>
+                <ng-template #promoAtiva>
+                    <div class="card-price-promo" *ngIf="(hamburguer.Preco - hamburguer.Promocao) > 0 else promoInvalida">
+                        <p >De: <del>R$: {{hamburguer.Preco}}</del></p> 
+                        <p>Por: R$ {{hamburguer.Promocao}}</p>        
+                    </div>
+                </ng-template>
+                <ng-template #promoInvalida>
+                    <div class="card-price" >
+                        <p >R$: {{hamburguer.Preco}}  </p>     
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

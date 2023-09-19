@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+
 import { HeaderComponent } from './components/header/header.component';
-import { CardapioComponent } from './components/pages/cardapio/cardapio.component';
+
+import { CardapioComponent } from './components/pages/client/cardapio/cardapio.component';
 
 import { LoginComponent } from './components/pages/admin/login/login.component';
 import { MenuComponent } from './components/pages/admin/menu/menu.component';
@@ -19,7 +22,9 @@ import { EditProdutoComponent } from './components/pages/admin/edit-produto/edit
 import { MessagesComponent } from './components/messages/messages.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/pages/home/home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SlideComponent } from './components/pages/client/slide/slide.component';
+import { StoryComponent } from './components/pages/client/story/story.component';
+
 
 
 @NgModule({
@@ -36,7 +41,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     EditProdutoComponent,
     MessagesComponent,
-    HomeComponent
+    HomeComponent,
+    SlideComponent,
+    StoryComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

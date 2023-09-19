@@ -16,8 +16,8 @@ export class HeaderComponent {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if(event instanceof NavigationEnd){
-        this.isHomePage = event.url === '/cardapio'
-        this.isMenuPage = event.url === '/menu'
+        this.isHomePage = event.url === '/home'
+        this.isMenuPage = event.url === '/cardapio'
       }
     })
   }
