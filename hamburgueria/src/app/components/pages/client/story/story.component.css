@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Arbutus+Slab');
+
+
+.container-story{
+    font-family: 'Arbutus Slab', serif;
+    height: 70vh;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.divisao{
+    width: 50%;
+
+}
+
+.esquerdo{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.retangulo{
+    width: 400px;
+    height: 600px;
+    background-color: #FBBAAC;
+}
+
+.container-img{
+    position: absolute;
+    top: 54px;
+    left: 475px;
+
+}
+
+img{
+    width: 400px;
+    height: 600px;
+}
+
+.direito{
+    margin: auto 50px;
+    width: 500px;
+    height: 600px;
+    text-align: justify;
+}
+
+.top{
+    margin: 30px;
+    font-family: 'Artubus';
+    text-align: center;
+}
+
+strong{
+    color: #FBBAAC;
+}
+
+
+h2{
+    font-size: 1em;
+}
+
+.story > p{
+    padding: 10px;
+    color: rgb(155, 155, 155);
+}
+
+.buttom{
+    padding: 20px;
+    text-align: center;
+}
+
+.linkcardapio{
+    color: black;
+    font-size: 0.8em;
+}
+
+.linkcardapio:hover{
+    color: white;
+}
+

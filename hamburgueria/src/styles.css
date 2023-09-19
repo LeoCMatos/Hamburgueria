@@ -19,8 +19,10 @@ a{
     padding: 15px 25px;
     font-size: 0.4em;
     color: white;
+    transition: 0.4s;
 }
 
 .linkcardapio:hover{
     background-color: #FBBAAC;
+    transition: 0.4s;
 }
