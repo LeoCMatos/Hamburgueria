@@ -5,14 +5,13 @@
     height: 100vh;
     font-family: 'Arbutus Slab', serif;
     color: white;
+    
+    background-image: url('https://raw.githubusercontent.com/LeoCMatos/Hamburgueria/main/hamburgueria/src/img/menu-1_resized.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-img{
-    width: 100%;
-    height: 100vh;
-}
-
-
 
 .container{
     width: 100%;
