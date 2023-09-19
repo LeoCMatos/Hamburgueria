@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './components/pages/home/home.component';
 import { LoginComponent } from './components/pages/admin/login/login.component';
 import { CardapioComponent } from './components/pages/cardapio/cardapio.component';
 import { MenuComponent } from './components/pages/admin/menu/menu.component';
@@ -10,8 +11,8 @@ import { CadastrarProdutoComponent } from './components/pages/admin/cadastrar-pr
 import { EditProdutoComponent } from './components/pages/admin/edit-produto/edit-produto.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/cardapio', pathMatch: 'full'},
-
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent},
   { path: 'cardapio', component: CardapioComponent},
   /*{ path: 'login', component: LoginComponent},*/
   { path: 'menu', component: MenuComponent, children:[

@@ -22,10 +22,6 @@
     height: 55px;
 }
 
-.navbar-toggle{
-    display: none;
-}
-
 .navbar-nav{
     display: flex;
     flex-wrap: wrap;
@@ -48,4 +44,12 @@
 .buttom-direct:hover{
     background-color: #FBBAAC;
     color: white;
+}
+
+@media screen and (max-width: 767px) {
+
+    .container{
+        justify-content: center;
+    }
+
 }

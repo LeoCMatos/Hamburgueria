@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { EditProdutoComponent } from './components/pages/admin/edit-produto/edit-produto.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './components/pages/home/home.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CadastrarProdutoComponent,
     FooterComponent,
     EditProdutoComponent,
-    MessagesComponent
+    MessagesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
