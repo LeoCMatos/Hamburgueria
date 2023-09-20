@@ -25,7 +25,7 @@ export class CadastrarProdutoComponent {
     Calorias: 0,
     promocao_do_dia: 'Nenhum dia',
     NaoFinalizado: 0,
-    Promocao: 0,
+    Promocao: 10,
     Ativar_Promocao: 0
   }
 
@@ -55,7 +55,7 @@ export class CadastrarProdutoComponent {
           Calorias: 0,
           promocao_do_dia: 'Nenhum dia',
           NaoFinalizado: 0,
-          Promocao: 0,
+          Promocao: 10,
           Ativar_Promocao: 0
         }
         this.messagesService.add("Produto cadastrado com sucesso!")

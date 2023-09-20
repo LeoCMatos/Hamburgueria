@@ -9,7 +9,7 @@ import { Router, Navigation, NavigationEnd } from '@angular/router';
 export class HeaderComponent {
 
   isHomePage = false
-  isMenuPage = false
+  isCardapioPage = false
 
   constructor(private router: Router){}
 
@@ -17,7 +17,7 @@ export class HeaderComponent {
     this.router.events.subscribe((event) => {
       if(event instanceof NavigationEnd){
         this.isHomePage = event.url === '/home'
-        this.isMenuPage = event.url === '/cardapio'
+        this.isCardapioPage = event.url === '/cardapio'
       }
     })
   }

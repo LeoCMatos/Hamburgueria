@@ -1,32 +1,111 @@
-<div *ngIf="dadosHamburguer">
-    <div class="cardapio-container" >
-        <div *ngFor="let hamburguer of dadosHamburguer">
-        <div class="card" *ngIf="hamburguer.Disponibilidade === 1 && hamburguer.Categoria === 'Lanches'">
-            <div class="card-container">
-                <div class="card-img">
-                    <img src={{hamburguer.Imagem}}>
-                </div>
-                <div class="card-info">
-                    <h2 class="card-title">{{hamburguer.Nome}}</h2>
-                    <h3 class="card-description">{{hamburguer.Descricao}}</h3>
-                </div>
-                <div class="card-price" *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
-                    <p >R$: {{hamburguer.Preco}}  </p>     
+<div class="top-cardapio">
+    <div class="container">
+        <div class="texto">
+            <h1>Cardapio</h1>
+            <p>Cardapio que vão conquistar o seu paladar!</p>
+        </div>
+        <div >
+            <ul class="container-navbar">
+                <li><button (click)="todos()"  class="nav-item esquerda" [ngClass]="{'ativo': all}">Todos</button></li>
+                <li><button (click)="lanches()" class="nav-item" [ngClass]="{'ativo': burger}">Lanches</button></li>
+                <li><button (click)="bebidas()" class="nav-item" [ngClass]="{'ativo': drinks}">Bebidas</button></li>
+                <li><button (click)="acompanhamentos()" class="nav-item direita" [ngClass]="{'ativo': addOns}">Acompanhamentos</button></li>
+            </ul>
+        </div>
+        <div class="container-produtos" >
+            <div class="card" *ngFor="let hamburguer of dadosHamburguer" >
+                
+                
+                    <div *ngIf="hamburguer.Disponibilidade === 1 && all === 1 && burger === 0 && drinks === 0 && addOns === 0 else SectionBurger">
+                        <img src={{hamburguer.Imagem}}>
+                        <h1 class="title">{{hamburguer.Nome}}</h1>
+                        <p>---------------------------------------------</p>
+                        <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
+                            <p >R$: {{hamburguer.Preco}}  </p>     
+                        </div>
+                        <ng-template #promoAtiva>
+                            <div *ngIf="(hamburguer.Preco - hamburguer.Promocao) > 0 && hamburguer.Ativar_Promocao === 1 else promoInvalida">
+                                <p >De: <del>R$: {{hamburguer.Preco}}</del></p> 
+                                <p>Por: R$ {{hamburguer.Promocao}}</p>        
+                            </div>
+                        </ng-template>
+                        <ng-template #promoInvalida>
+                            <div>
+                                <p >R$: {{hamburguer.Preco}}  </p>     
+                            </div>
+                        </ng-template>
+                    </div>
 
-                </div>
-                <ng-template #promoAtiva>
-                    <div class="card-price-promo" *ngIf="(hamburguer.Preco - hamburguer.Promocao) > 0 else promoInvalida">
-                        <p >De: <del>R$: {{hamburguer.Preco}}</del></p> 
-                        <p>Por: R$ {{hamburguer.Promocao}}</p>        
-                    </div>
-                </ng-template>
-                <ng-template #promoInvalida>
-                    <div class="card-price" >
-                        <p >R$: {{hamburguer.Preco}}  </p>     
-                    </div>
-                </ng-template>
+                    <ng-template #SectionBurger>
+                        <div *ngIf="hamburguer.Disponibilidade === 1 && all === 0 && burger === 1 && drinks === 0 && addOns === 0 && hamburguer.Categoria === 'Lanches' else SectionDrinks">
+                            <img src={{hamburguer.Imagem}}>
+                            <h1 class="title">{{hamburguer.Nome}}</h1>
+                            <p>---------------------------------------------</p>
+                            <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
+                                <p >R$: {{hamburguer.Preco}}  </p>     
+                            </div>
+                            <ng-template #promoAtiva>
+                                <div *ngIf="(hamburguer.Preco - hamburguer.Promocao) > 0 else promoInvalida">
+                                    <p >De: <del>R$: {{hamburguer.Preco}}</del></p> 
+                                    <p>Por: R$ {{hamburguer.Promocao}}</p>        
+                                </div>
+                            </ng-template>
+                            <ng-template #promoInvalida>
+                                <div>
+                                    <p >R$: {{hamburguer.Preco}}  </p>     
+                                </div>
+                            </ng-template>
+                        </div>
+                    </ng-template>
+                    <ng-template #SectionDrinks>
+                        <div *ngIf="hamburguer.Disponibilidade === 1 && all === 0 && burger === 0 && drinks === 1 && addOns === 0 && hamburguer.Categoria === 'Bebidas' else SectionAddOns">
+                            <img src={{hamburguer.Imagem}}>
+                            <h1 class="title">{{hamburguer.Nome}}</h1>
+                            <p>---------------------------------------------</p>
+                            <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
+                                <p >R$: {{hamburguer.Preco}}  </p>     
+                            </div>
+                            <ng-template #promoAtiva>
+                                <div *ngIf="(hamburguer.Preco - hamburguer.Promocao) > 0 else promoInvalida">
+                                    <p >De: <del>R$: {{hamburguer.Preco}}</del></p> 
+                                    <p>Por: R$ {{hamburguer.Promocao}}</p>        
+                                </div>
+                            </ng-template>
+                            <ng-template #promoInvalida>
+                                <div>
+                                    <p >R$: {{hamburguer.Preco}}  </p>     
+                                </div>
+                            </ng-template>
+                        </div>
+                    </ng-template>
+
+                    <ng-template #SectionAddOns>
+                        <div *ngIf="hamburguer.Disponibilidade === 1 && all === 0 && burger === 0 && drinks === 0 && addOns === 1 && hamburguer.Categoria === 'Acompanhamentos'">
+                            <img src={{hamburguer.Imagem}}>
+                            <h1 class="title">{{hamburguer.Nome}}</h1>
+                            <p>---------------------------------------------</p>
+                            <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
+                                <p >R$: {{hamburguer.Preco}}  </p>     
+                            </div>
+                            <ng-template #promoAtiva>
+                                <div *ngIf="(hamburguer.Preco - hamburguer.Promocao) > 0 else promoInvalida">
+                                    <p >De: <del>R$: {{hamburguer.Preco}}</del></p> 
+                                    <p>Por: R$ {{hamburguer.Promocao}}</p>        
+                                </div>
+                            </ng-template>
+                            <ng-template #promoInvalida>
+                                <div>
+                                    <p >R$: {{hamburguer.Preco}}  </p>     
+                                </div>
+                            </ng-template>
+                        </div>
+                    </ng-template>
+                
+                
+
+                
+
             </div>
         </div>
-    </div>
     </div>
 </div>

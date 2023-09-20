@@ -25,6 +25,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { SlideComponent } from './components/pages/client/slide/slide.component';
 import { StoryComponent } from './components/pages/client/story/story.component';
 import { BannerHomeComponent } from './components/pages/client/banner-home/banner-home.component';
+import { CardapioPageComponent } from './components/pages/client/cardapio-page/cardapio-page.component';
 
 
 
@@ -45,7 +46,8 @@ import { BannerHomeComponent } from './components/pages/client/banner-home/banne
     HomeComponent,
     SlideComponent,
     StoryComponent,
-    BannerHomeComponent
+    BannerHomeComponent,
+    CardapioPageComponent
   ],
   imports: [
     BrowserModule,

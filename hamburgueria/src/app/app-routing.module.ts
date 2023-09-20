@@ -7,11 +7,12 @@ import { EditCardapioComponent } from './components/pages/admin/edit-cardapio/ed
 import { CadastrarProdutoComponent } from './components/pages/admin/cadastrar-produto/cadastrar-produto.component';
 import { EditProdutoComponent } from './components/pages/admin/edit-produto/edit-produto.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { CardapioPageComponent } from './components/pages/client/cardapio-page/cardapio-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
-  { path: 'cardapio', component: CardapioComponent},
+  { path: 'cardapio', component: CardapioPageComponent},
   { path: 'menu', component: MenuComponent, children:[
     {path: 'edit-header', component: EditHeaderComponent},
     {path: 'edit-cardapio', component: EditCardapioComponent},
