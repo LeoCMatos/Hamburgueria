@@ -24,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/pages/home/home.component';
 import { SlideComponent } from './components/pages/client/slide/slide.component';
 import { StoryComponent } from './components/pages/client/story/story.component';
+import { BannerHomeComponent } from './components/pages/client/banner-home/banner-home.component';
 
 
 
@@ -43,7 +44,8 @@ import { StoryComponent } from './components/pages/client/story/story.component'
     MessagesComponent,
     HomeComponent,
     SlideComponent,
-    StoryComponent
+    StoryComponent,
+    BannerHomeComponent
   ],
   imports: [
     BrowserModule,
