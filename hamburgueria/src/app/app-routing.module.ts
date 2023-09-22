@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
   { path: 'cardapio', component: CardapioPageComponent},
+  { path: 'menu', redirectTo: 'menu/edit-cardapio', pathMatch: 'full'},
   { path: 'menu', component: MenuComponent, children:[
     {path: 'edit-header', component: EditHeaderComponent},
     {path: 'edit-cardapio', component: EditCardapioComponent},

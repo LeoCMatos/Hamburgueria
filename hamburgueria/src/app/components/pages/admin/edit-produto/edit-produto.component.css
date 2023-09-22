@@ -4,11 +4,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, #FFA500, #FF6347); 
+    background-color: white; 
 }
 
 .container-form{
-    background-color: white;
+    background-color: #FBBAAC;
     width: 700px;
     height: 760px;
     margin: auto;
@@ -21,7 +21,7 @@
 }
 
 .container-form > h1{
-    color: #ffa600;
+    color: black;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.603);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -101,6 +101,7 @@
 .back{
     color: black;
     transition: 0.4s;
+    background-color: white;
 }
 
 .back:hover{

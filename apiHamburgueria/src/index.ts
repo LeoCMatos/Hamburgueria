@@ -13,6 +13,9 @@ const hamburguerFunctions = require('./functions/hamburguer')
 
 // Rotas para hamburguers
 app.get('/hamburguer', hamburguerFunctions.getAllBurguers)
+app.get('/hamburguer/lanches', hamburguerFunctions.getAllLanches)
+app.get('/hamburguer/bebidas', hamburguerFunctions.getAllBebidas)
+app.get('/hamburguer/acompanhamentos', hamburguerFunctions.getAllAcompanhamentos)
 app.get('/hamburguer/:id', hamburguerFunctions.getBurguer)
 app.post('/hamburguer', hamburguerFunctions.createBurguer)
 app.put('/hamburguer/:id', hamburguerFunctions.updatedBurguer)

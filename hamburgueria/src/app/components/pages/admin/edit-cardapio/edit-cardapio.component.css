@@ -1,14 +1,14 @@
 #container-cardapio{
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    margin: 1px auto;
 
 }
 
 .container-produto, 
 .container-produto-nao-finalizado{
     width: 249px;
-    height: 250px;
+    height: 270px;
     margin: 19px 18px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -24,7 +24,7 @@
 }
 
 .container-produto{
-    background: linear-gradient(45deg, #FFA500, #FF6347);
+    background-color: #FBBAAC;
 }
 
 .dados-produto{
@@ -58,10 +58,14 @@
     width: 80%;
     border-radius: 25px;
     border: 1px solid rgba(0, 0, 0, 0.205);
+    transition: 0.4s;
+
 }
 
 .info-produto > button#ProdutoNovo:hover{
-    background-color: red;
+    background-color: blue;
+    color: white;
+    transition: 0.4s;
 }
 
 .info-produto > #filter{

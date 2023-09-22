@@ -68,6 +68,45 @@ function getBurguer(req: Request, res: Response){
         }
     })
 }
+// pegar todo os lanches
+function getAllLanches(req: Request, res: Response){
+    db.query("SELECT * FROM hamburguers where Categoria = 'Lanches'", (error,results) => {
+        if(error){
+            console.error('Erro ao buscar Lanches:', error)
+            res.status(500).json({error: 'Erro interno do servidor'})
+            return
+        }
+
+        res.json(results)
+    })
+}
+
+// pegar todas as bebidas
+
+
+function getAllBebidas(req: Request, res: Response){
+    db.query("SELECT * FROM hamburguers where Categoria = 'Bebidas'",(error,results) =>{
+        if(error){
+            console.log('Erro ao buscar Lanches:', error)
+            res.status(500).json({Error: 'Erro interno do servidor'})
+            return
+        }
+        res.json(results)
+    })
+}
+
+//pegar todos os acompanhamentos
+
+function getAllAcompanhamentos(req: Request, res: Response){
+    db.query("SELECT * FROM hamburguers where Categoria = 'Acompanhamentos'",(error,results) =>{
+        if(error){
+            console.log('Erro ao buscar Lanches:', error)
+            res.status(500).json({Error: 'Erro interno do servidor'})
+            return
+        }
+        res.json(results)
+    })
+}
 
 //criar novo hamburguer
 function createBurguer(req: Request, res: Response) {
@@ -130,6 +169,9 @@ function deleteBurguer(req: Request, res: Response){
 module.exports = {
     createBurguer,
     getAllBurguers,
+    getAllLanches,
+    getAllBebidas,
+    getAllAcompanhamentos,
     getBurguer,
     updatedBurguer,
     deleteBurguer

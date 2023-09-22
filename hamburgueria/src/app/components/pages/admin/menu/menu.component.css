@@ -1,56 +1,42 @@
-.menu-container{
+.container{
+    font-family: 'Arbutus Slab', serif;
     display: flex;
-    margin-top: 10px;
-    height: 801px;
-    border: 1px solid rgba(0, 0, 0, 0.356);
+    flex-direction: row;
 }
 
-nav{
-    border-right: 1px solid rgba(0, 0, 0, 0.356);
-}
-
-li{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.356);
-    
-    width: 150px;
+.container-navbar{
+    width:  19%;
+    margin: 30px 30px 30px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
     text-align: center;
-    background-color: bisque;
-    color: black;
 }
 
-li > a > div {
-    color: black;
-    width: 100%;
+#title{
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.253);
 }
 
-li > a > div:hover{
-    color: #FF6347;
+.nav-item{
+    cursor: pointer;
+    padding: 20px;
+    transition: 0.4s;
 }
 
-li#ultimo{
-    border-bottom: none;
+.nav-item:hover{
+    background-color: #FBBAAC;
+    color: white;
+    transition: 0.4s;
+    border-radius: 4px;
+
 }
 
+.active{ 
+    background-color: #FBBAAC;
+    color: white;
+    transition: 0.4s;
+    border-radius: 4px;
+}
 
 .router{
-    height: 800px;
-    width: 100%;
-    overflow-y: auto;
+    width: 80%;
 }
-
-@media screen and (max-width: 767px) {
-
-    .menu-container{
-        height: 801px;
-        border: 1px solid rgba(0, 0, 0, 0.356);
-        flex-direction: column;
-        }
-    
-    li{
-        width: 100%;
-    }
-    
-    .router{
-        height: auto;
-    }
-} 

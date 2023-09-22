@@ -1,17 +1,17 @@
-<div class="menu-container">
-    <nav>
-        <ul>
-            <li><a routerLink="edit-cardapio"><div>Cardapio</div></a></li>
+<app-banner-menu></app-banner-menu>
+<div class="container">
+    <div class="container-navbar">
+        <h1 id="title">Menu</h1>
+        <nav>
+            <ul class="navbar">
+                <li class="nav-item" [ngClass]="{'active': isCardapioPage}" routerLink="./edit-cardapio">Cardapio</li>
+                <li class="nav-item" [ngClass]="{'active': isEditProdutoPage}" routerLink="./cadastrar-produto">Cadastrar produto</li>
 
-         <!--   <li><a routerLink="edit-header">Menu</a></li>
-            <li><a routerLink="edit-header">Editar Cabeçalho</a>
-            </li>
-            <li><a routerLink="edit-cardapio">Cardapio</a></li>
-            <li id="ultimo"><a routerLink="funcionario" >Funcionarios</a></li>-->
-        </ul>
-    </nav>
+                
+            </ul>
+        </nav>
+    </div>
     <div class="router">
         <router-outlet></router-outlet>
     </div>
 </div>
-

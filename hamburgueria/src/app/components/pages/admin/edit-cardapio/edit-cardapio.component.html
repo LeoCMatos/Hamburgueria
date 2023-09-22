@@ -7,15 +7,6 @@
             <button id="ProdutoNovo" routerLink="/menu/cadastrar-produto">Adicionar Novo Produto</button>
         </div>
     </div>
-    <div class="container-produto">
-        <div class="produto-img">
-            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/7126739-icone-de-ponto-de-interrogacao-gratis-vetor.jpg" alt="">
-        </div>
-        <div class="info-produto">
-            <label for="filter-placeholder" id="filter">Filtrar: </label>
-            <input type="text" id="filter-placeholder" placeholder="Pesquisar Produto">
-        </div>
-    </div>
     <div *ngFor="let hamburguer of dadosHamburguer">
         <div  *ngIf="hamburguer.NaoFinalizado === 0" class="container-produto-nao-finalizado
         ">

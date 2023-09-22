@@ -3,23 +3,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, #FFA500, #FF6347); 
+    background-color: white; 
 }
 
 
 .container-form {
     width: 400px;
-    background-color: white;
+    background-color: #FBBAAC;
     border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
 #form {
     margin: 15px;
     text-align: center;
 }
 
 #form > h2 {
-    color: #ffa600;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.411);
+    color: black;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
 }
 
 .form-group {
@@ -41,17 +43,21 @@ input[type="text"], input[type="number"] {
 }
 
 input[type="submit"] {
-    background: linear-gradient(45deg, #FFA500, #FF6347);
+    background-color: blue;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    transition: 0.4s;
+    margin-bottom: 10px;
 }
+
 input[type="submit"]:hover {
-    background: linear-gradient(45deg, #FFA500, #FFA500);
+    background-color: white;
     transition: 0.7s;
+    color: black;
 }
 
 .error{

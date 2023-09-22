@@ -60,13 +60,27 @@
     border-radius: 6px;
 }
 
+.all{
+    display: none;
+}
+
+.lanches{
+    display: none;
+}
+
 .container-produtos{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
+.card{
+    display: none;
+}
 
+.card-ativo{
+    display: block;
+}
 
 .card  > div > img{
     width: 350px;

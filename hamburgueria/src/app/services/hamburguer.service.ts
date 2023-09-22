@@ -15,6 +15,19 @@ export class HamburguerService {
     return this.http.get<any>(`${this.baseApiUrl}/hamburguer`)
   }
 
+  getLanches(): Observable<any>{
+    return this.http.get<any>(`${this.baseApiUrl}/hamburguer/lanches`)
+  }
+
+  getBebidas(): Observable<any>{
+    return this.http.get<any>(`${this.baseApiUrl}/hamburguer/bebidas`)
+  }
+
+  getAcompanhamentos(): Observable<any>{
+    return this.http.get<any>(`${this.baseApiUrl}/hamburguer/Acompanhamentos`)
+  }
+
+
   getBurguer(id: any): Observable<any> {
     return this.http.get<any>(`${this.baseApiUrl}/hamburguer/${id}`);
   }

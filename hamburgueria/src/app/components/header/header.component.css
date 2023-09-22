@@ -2,7 +2,7 @@
 
 .top-navbar{
     z-index: 10;
-    width: 100%;
+    width: 100vw;
     font-family: 'Athiti', sans-serif;
     background-color: #F8F9FA;
     position: fixed;
@@ -52,8 +52,12 @@
 
 @media screen and (max-width: 767px) {
 
-    .container{
-        justify-content: center;
+    .navbar{
+        width: 100vw;
     }
 
+    .container{
+        width: 99vw;
+        justify-content: center;
+    }
 }

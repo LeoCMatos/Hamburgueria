@@ -2,7 +2,7 @@
 
 .container-story{
     font-family: 'Arbutus Slab', serif;
-    height: 70vh;
+    min-height: 70vh;
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -11,7 +11,6 @@
 
 .divisao{
     width: 50%;
-
 }
 
 .esquerdo{
@@ -80,3 +79,72 @@ h2{
     color: white;
 }
 
+@media screen and (max-width: 767px) {
+
+    .container-story{
+        flex-direction: column;
+    }
+
+    .divisao{
+        width: 100%;
+    }
+
+
+    .esquerdo{
+        display: none;
+        order: 2;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    
+    .retangulo{
+
+        display: none;
+        width: 200px;
+        height: 300px;
+        background-color: #FBBAAC;
+    }
+    
+    .container-img{
+        position: absolute;
+        top: 30px;
+        left: 25%;
+        display: none;
+    }
+    
+    img{
+        display: none;
+ 
+        width: 200px;
+        height: 300px;
+    }
+    
+    .direito{
+        order: 1;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .container-story{
+        width: 100%;
+    }
+
+    .story{
+        width: 100%;
+        font-size: 0.6em;
+    }
+
+    .top{
+        margin: 0px;
+        font-family: 'Artubus';
+        text-align: center;
+    }
+
+    h2{
+        font-size: 0.8;
+    }
+    
+}

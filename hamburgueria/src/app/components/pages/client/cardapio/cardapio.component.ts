@@ -7,7 +7,10 @@ import { HamburguerService } from 'src/app/services/hamburguer.service';
   styleUrls: ['./cardapio.component.css']
 })
 export class CardapioComponent {
-  dadosHamburguer: any
+  dadosLanches: any
+  dadosBebidas: any
+  dadosAcompanhamentos:any
+
 
 constructor (private HamburguerService: HamburguerService) {}
   all = 1
@@ -16,13 +19,20 @@ constructor (private HamburguerService: HamburguerService) {}
   addOns = 0
   
   ngOnInit(): void {
-    this.HamburguerService.getBurguers().subscribe(data =>{
-      this.dadosHamburguer = data
+    this.HamburguerService.getLanches().subscribe(data =>{
+      this.dadosLanches = data
+    })
+
+    this.HamburguerService.getBebidas().subscribe(data =>{
+      this.dadosBebidas = data
+    })
+
+    this.HamburguerService.getAcompanhamentos().subscribe(data =>{
+      this.dadosAcompanhamentos = data
     })
   }
 
-  ordemCategorias: string[] = ['Lanches', 'Bebidas', 'Acompanhamentos'];
-
+  
   
   todos(){
     this.all = 1
@@ -36,7 +46,6 @@ constructor (private HamburguerService: HamburguerService) {}
     this.burger = 1
     this.drinks = 0
     this.addOns = 0
-
   }
 
   bebidas(){
@@ -44,8 +53,6 @@ constructor (private HamburguerService: HamburguerService) {}
     this.burger = 0
     this.drinks = 1
     this.addOns = 0
-
-    
   }
 
   acompanhamentos(){

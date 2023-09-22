@@ -4,7 +4,6 @@
     height: 100vh;
     font-family: 'Arbutus Slab', serif;
     color: white;
-    
     background-image: url('https://raw.githubusercontent.com/LeoCMatos/Hamburgueria/main/hamburgueria/src/img/menu-1_resized.png');
     background-attachment: fixed;
     background-position: center;
@@ -32,3 +31,19 @@
     margin: auto;
 }
 
+@media screen and (max-width: 767px) {
+
+    .container{
+        font-size: 1.5em;
+    }
+
+    #description{
+        width: 90%;
+        font-size: 0.8em;
+    }
+
+    .linkcardapio{
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 0.432);
+    }
+}
