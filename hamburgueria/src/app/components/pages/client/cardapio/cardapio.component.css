@@ -102,3 +102,112 @@
 p{
     margin-left: 15px; 
 }
+
+
+@media screen and (max-width: 767px) {
+
+
+    .top-cardapio{
+        width: 100vw;
+    }
+    
+    .container{
+        width: 60%;
+        margin: auto;
+        font-size: 0.8em;
+    }
+    
+    .texto{
+        text-align: center;
+    }
+    
+    .container-navbar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .navbar{
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+  
+    
+    .esquerda{
+        border-left: 1px solid rgba(0, 0, 0, 0.24);
+        
+    }
+    
+    .direita{
+        border-right: 1px solid rgba(0, 0, 0, 0.24);
+        
+    }
+    
+    .nav-item:hover{
+        background-color: #FBBAAC;
+        color: white;
+        transition: 0.4s;
+        border-radius: 6px;
+    }
+    
+    .ativo{
+        background-color: #FBBAAC;
+        color: white;
+        transition: 0.4s;
+        border-radius: 6px;
+
+    }
+    
+    .all{
+        display: none;
+    }
+    
+    .lanches{
+        display: none;
+    }
+
+    .container{
+        width: 100%;
+    }
+    
+    .container-produtos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 90%;
+    }
+    
+    .card{
+        display: none;
+    }
+    
+    .card-ativo{
+        display: block;
+    }
+    
+    .card  > div > img{
+        width: 100%;
+        margin: 15px;
+    }
+    
+    .title{
+        text-align: center;
+        font-size: 1.3em;
+        
+    }
+    
+    .price{
+        font-size: 1.3em;
+        padding-left: 15px;
+    }
+    
+    p{
+        margin-left: 15px; 
+    }
+    
+
+}
