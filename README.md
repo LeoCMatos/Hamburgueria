@@ -15,8 +15,8 @@ Este projeto está atualmente em desenvolvimento ativo, e estou animado para com
 
 - Video do projeto
 
+ [![Watch the video](https://drive.google.com/file/d/1UQCfWxX9hkqypE0cOmHgdi72u53nRcra/view?usp=sharing)](https://drive.google.com/file/d/17hKzy5onEhcu8LRMCNRjjKi0QP18suJO/view?usp=sharing)
 
-  <source src="img/projeto.mp4" type="video/mp4">
 
 
 ### Tecnologias Utilizadas
