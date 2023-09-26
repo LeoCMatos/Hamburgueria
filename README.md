@@ -15,10 +15,9 @@ Este projeto está atualmente em desenvolvimento ativo, e estou animado para com
 
 - Video do projeto
 
-   <video width="320" height="240" controls>
+
   <source src="img/projeto.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
 
 ### Tecnologias Utilizadas
 
