@@ -14,6 +14,7 @@ Este projeto está atualmente em desenvolvimento ativo, e estou animado para com
 ### Capturas de Tela 
 
 - Video do projeto
+- Clique na foto
 
 [![Video do Projeto](https://i9.ytimg.com/vi_webp/qcAsVagnH5A/mqdefault.webp?v=6512e1fb&sqp=CIjDy6gG&rs=AOn4CLDBo6e7noidpO5ZtjfvapahYhhVmA)](https://www.youtube.com/watch?v=qcAsVagnH5A)
 
