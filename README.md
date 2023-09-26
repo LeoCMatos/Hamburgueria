@@ -1,6 +1,6 @@
-## 🌐 Meu Projeto - Hamburgueria em Desenvolvimento
+## 🌐 Projeto - Hamburgueria em Desenvolvimento
 
-Bem-vindo ao meu projeto de hamburgueria em desenvolvimento! Este é um projeto empolgante em que estou trabalhando atualmente. O objetivo final é criar uma plataforma completa para gerenciar pedidos, controlar o estoque e muito mais em uma hamburgueria.
+Bem-vindo ao projeto de hamburgueria em desenvolvimento! Este é um projeto empolgante em que estou trabalhando atualmente. O objetivo final é criar uma plataforma completa para gerenciar pedidos, controlar o estoque e muito mais em uma hamburgueria.
 
 ### Funcionalidades Planejadas
 
