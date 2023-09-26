@@ -61,7 +61,7 @@ h2{
 
 .story > p{
     padding: 10px;
-    color: rgb(155, 155, 155);
+    color: rgb(114, 114, 114);
 }
 
 .buttom{
@@ -83,6 +83,8 @@ h2{
 
     .container-story{
         flex-direction: column;
+        min-height: auto;
+        margin: 10px 0px;
     }
 
     .divisao{
@@ -134,7 +136,7 @@ h2{
 
     .story{
         width: 100%;
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 
     .top{

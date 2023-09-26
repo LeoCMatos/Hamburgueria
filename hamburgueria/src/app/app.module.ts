@@ -27,7 +27,7 @@ import { StoryComponent } from './components/pages/client/story/story.component'
 import { BannerHomeComponent } from './components/pages/client/banner-home/banner-home.component';
 import { CardapioPageComponent } from './components/pages/client/cardapio-page/cardapio-page.component';
 import { BannerMenuComponent } from './components/pages/admin/banner-menu/banner-menu.component';
-
+import { BannerCardapioComponent } from './components/pages/client/banner-cardapio/banner-cardapio.component';
 
 
 @NgModule({
@@ -49,7 +49,8 @@ import { BannerMenuComponent } from './components/pages/admin/banner-menu/banner
     StoryComponent,
     BannerHomeComponent,
     CardapioPageComponent,
-    BannerMenuComponent
+    BannerMenuComponent,
+    BannerCardapioComponent
   ],
   imports: [
     BrowserModule,

@@ -179,18 +179,13 @@ p{
         flex-wrap: wrap;
         flex-direction: row;
         width: 90%;
+        margin: auto;
     }
     
-    .card{
-        display: none;
-    }
-    
-    .card-ativo{
-        display: block;
-    }
     
     .card  > div > img{
-        width: 100%;
+        width: 345px;
+        width: 345px;
         margin: 15px;
     }
     

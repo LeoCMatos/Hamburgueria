@@ -115,3 +115,24 @@
     width: 100%;
     text-align: center;
 }
+
+@media screen and (max-width: 767px) {
+
+
+    .container-router{
+        height: auto;
+    }
+
+    .container-form{
+        width: 250px;
+        height: auto;
+        margin: 10px 0px;
+    }   
+
+    .save, .delete, .back{
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+}
+

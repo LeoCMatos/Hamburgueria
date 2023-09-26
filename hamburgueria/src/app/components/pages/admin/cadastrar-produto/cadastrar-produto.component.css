@@ -63,3 +63,26 @@ input[type="submit"]:hover {
 .error{
     color: red;
 }
+
+
+@media screen and (max-width: 767px) {
+
+
+    .container{
+        height: auto;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .container-form {
+        width: 100%;
+        margin: 10px;
+    }
+
+    
+#form > h2 {
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
+}
+
+}

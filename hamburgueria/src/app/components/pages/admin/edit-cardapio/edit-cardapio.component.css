@@ -152,9 +152,9 @@
      }
     .container-produto, 
     .container-produto-nao-finalizado{
-        width: 150px;
+        width: 250px;
         height: 200px;
-        margin: 19px 10px;
+        margin: 5px 10px;
     }
 
     .produto-img{
