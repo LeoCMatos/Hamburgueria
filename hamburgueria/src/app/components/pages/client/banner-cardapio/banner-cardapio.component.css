@@ -54,3 +54,15 @@
         padding: 10px;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 962px) {
+
+    .container{
+        height: 350px;
+        justify-content: end;
+    }
+
+    .texto{
+        width: 80%;
+    }
+}

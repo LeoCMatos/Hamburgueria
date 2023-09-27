@@ -101,7 +101,6 @@ h2{
     }
     
     .retangulo{
-
         display: none;
         width: 200px;
         height: 300px;
@@ -117,7 +116,6 @@ h2{
     
     img{
         display: none;
- 
         width: 200px;
         height: 300px;
     }
@@ -148,5 +146,41 @@ h2{
     h2{
         font-size: 0.8;
     }
+
     
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 962px) {
+
+    .container-story{
+        margin: auto;
+        min-height: 60vh;
+    }
+
+    .container-img{
+        position: absolute;
+        top: 190px;
+        left: 22px;
+        display: block;
+    }
+
+    img{
+        width: 250px;
+        height: 425px;
+    }
+
+    .retangulo{
+        position: absolute;
+        top: 175px;
+        left: 10px;
+        width: 250px;
+        height: 425px;
+    }
+
+    .direito{
+        order: 1;
+        margin: auto;
+    }
+
 }
