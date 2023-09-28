@@ -40,3 +40,73 @@ img{
 .ingredientes {
     font-size: 1.3em;
 }
+
+@media screen and (max-width: 767px) {
+
+    .container{
+        flex-direction: column;
+    }
+
+    .lado-esquerdo{
+        width: 100%;
+    }
+
+    .imagem{
+        width: 382px;
+        height: 259px;
+        margin: auto;
+    }
+    
+    img{
+        width: 382px;
+        height: 259px;
+    }
+
+    .lado-direito{
+        width: 100%;
+    }
+    
+    .texto > h2, .texto >p{
+        width: 100%;
+    }
+
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 962px) {
+
+    .container{
+        flex-direction: column;
+    }
+
+    .lado-esquerdo{
+        width: 100%;
+    }
+
+    .imagem{
+        width: 450px;
+        height: 300px;
+        margin: auto;
+    }
+    
+    img{
+        width: 450px;
+        height: 300px;
+    }
+
+    .lado-direito{
+        width: 100%;
+    }
+    
+    .texto > h2, .texto >p{
+        width: 70%;
+        margin: auto;
+    }
+
+    .texto > h2{
+        text-align: center;
+    }
+
+
+}
