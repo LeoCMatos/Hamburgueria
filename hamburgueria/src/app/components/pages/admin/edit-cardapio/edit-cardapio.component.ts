@@ -13,7 +13,7 @@ export class EditCardapioComponent {
   constructor(private HamburguerService: HamburguerService){}
 
   ngOnInit(): void{
-    this.HamburguerService.getBurguers().subscribe(data => {
+    this.HamburguerService.getProdutos().subscribe(data => {
       this.dadosHamburguer = data
       const preco = parseFloat(this.dadosHamburguer.Preco);
       const promocao = parseFloat(this.dadosHamburguer.Promocao);

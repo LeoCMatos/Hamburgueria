@@ -2,6 +2,7 @@
     font-family: 'Arbutus Slab', serif;
     display: flex;
     flex-direction: row;
+    min-height: 97vh;
 }
 
 .container-navbar{

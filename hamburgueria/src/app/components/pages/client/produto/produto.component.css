@@ -1,0 +1,42 @@
+.container{
+    padding-top: 90px;
+    display: flex;
+    width: 100%;
+    min-height: 97vh;
+}
+/* Lado esquerdo */
+.lado-esquerdo{
+    width: 50%;
+}
+
+.imagem{
+    width: 450px;
+    height: 300px;
+    margin: 0px 40%;
+}
+
+img{
+    width: 450px;
+    height: 300px;
+}
+/* Lado direito */
+.lado-direito{
+    width: 50%;
+}
+
+.texto > h2, .texto >p{
+    padding: 15px;
+    width: 75%;
+}
+
+.texto > h2 {
+    font-size: 42px;
+}
+
+.descricao, .calorias{
+    font-size: 24px;
+}
+
+.ingredientes {
+    font-size: 1.3em;
+}

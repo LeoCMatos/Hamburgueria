@@ -39,7 +39,7 @@ export class EditProdutoComponent {
 
   ngOnInit(): void{
     const id = Number(this.route.snapshot.paramMap.get("id"))
-    this.HamburguerService.getBurguer(id).subscribe(data => {
+    this.HamburguerService.getProduto(id).subscribe(data => {
       this.dadoHamburguer = data
     })
   }
@@ -76,7 +76,6 @@ export class EditProdutoComponent {
     this.HamburguerService.excluirRegistro(this.dadoHamburguer.ID.toString()).subscribe(() => {
       this.router.navigate(['/menu/edit-cardapio'])
       this.messagesService.add("Item  Excluido com sucesso!")
-
     })
   }
     

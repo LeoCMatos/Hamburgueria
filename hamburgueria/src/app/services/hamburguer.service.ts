@@ -11,7 +11,7 @@ export class HamburguerService {
   
   constructor (private http: HttpClient) { }
 
-  getBurguers(): Observable<any>{
+  getProdutos(): Observable<any>{
     return this.http.get<any>(`${this.baseApiUrl}/hamburguer`)
   }
 
@@ -28,7 +28,7 @@ export class HamburguerService {
   }
 
 
-  getBurguer(id: any): Observable<any> {
+  getProduto(id: any): Observable<any> {
     return this.http.get<any>(`${this.baseApiUrl}/hamburguer/${id}`);
   }
 

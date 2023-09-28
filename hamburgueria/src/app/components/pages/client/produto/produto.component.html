@@ -1,0 +1,16 @@
+<div class="container" *ngIf="produto">
+    <div class="lado-esquerdo">
+        <div class="imagem">
+            <img src="{{produto.Imagem}}" alt="">
+        </div>  
+    </div>
+    <div class="lado-direito">
+        <div class="texto">
+            <h2>{{produto.Nome}}</h2>
+            <p class="descricao">{{produto.Descricao}}</p>
+            <p class="calorias">{{produto.Calorias}} Kcal</p>
+            <p class="ingredientes">{{produto.Ingredientes}}</p>
+        </div>
+    </div>
+</div>
+

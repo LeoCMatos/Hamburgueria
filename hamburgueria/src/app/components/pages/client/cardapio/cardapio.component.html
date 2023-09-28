@@ -13,11 +13,10 @@
             </ul>
         </div>
         <div class="container-produtos" >
-            <div class="card" [ngClass]="{'card-ativo': all}" *ngFor="let hamburguer of dadosLanches">
+            <div class="card" [ngClass]="{'card-ativo': all}" *ngFor="let hamburguer of dadosLanches" routerLink="/produto/{{hamburguer.ID}}">
                     <div *ngIf="hamburguer.Disponibilidade === 1">
                         <img src={{hamburguer.Imagem}}>
                         <h1 class="title">{{hamburguer.Nome}}</h1>
-                        <p>---------------------------------------------</p>
                         <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
                             <p >R$: {{hamburguer.Preco}}  </p>     
                         </div>
@@ -34,12 +33,11 @@
                         </ng-template>
                     </div>
             </div>
-            <div class="card" [ngClass]="{'card-ativo': all}" *ngFor="let hamburguer of dadosBebidas">
+            <div class="card" [ngClass]="{'card-ativo': all}" *ngFor="let hamburguer of dadosBebidas" routerLink="/produto/{{hamburguer.ID}}">
                 <div *ngIf="hamburguer.Disponibilidade === 1">
                     <img src={{hamburguer.Imagem}}>
                     <h1 class="title">{{hamburguer.Nome}}</h1>
-                    <p>---------------------------------------------</p>
-                    <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
+                    <div class="linha" *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
                         <p >R$: {{hamburguer.Preco}}  </p>     
                     </div>
                     <ng-template #promoAtiva>
@@ -55,11 +53,10 @@
                     </ng-template>
                 </div>
             </div>   
-            <div class="card" [ngClass]="{'card-ativo': all}" *ngFor="let hamburguer of dadosAcompanhamentos">
+            <div class="card" [ngClass]="{'card-ativo': all}" *ngFor="let hamburguer of dadosAcompanhamentos" routerLink="/produto/{{hamburguer.ID}}">
                 <div *ngIf="hamburguer.Disponibilidade === 1">
                     <img src={{hamburguer.Imagem}}>
                     <h1 class="title">{{hamburguer.Nome}}</h1>
-                    <p>---------------------------------------------</p>
                     <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
                         <p >R$: {{hamburguer.Preco}}  </p>     
                     </div>
@@ -81,7 +78,6 @@
                 <div *ngIf="hamburguer.Disponibilidade === 1">
                     <img src={{hamburguer.Imagem}}>
                     <h1 class="title">{{hamburguer.Nome}}</h1>
-                    <p>---------------------------------------------</p>
                     <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
                         <p >R$: {{hamburguer.Preco}}  </p>     
                     </div>
@@ -103,7 +99,6 @@
                 <div *ngIf="hamburguer.Disponibilidade === 1">
                     <img src={{hamburguer.Imagem}}>
                     <h1 class="title">{{hamburguer.Nome}}</h1>
-                    <p>---------------------------------------------</p>
                     <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
                         <p >R$: {{hamburguer.Preco}}  </p>     
                     </div>
@@ -125,7 +120,6 @@
                 <div *ngIf="hamburguer.Disponibilidade === 1">
                     <img src={{hamburguer.Imagem}}>
                     <h1 class="title">{{hamburguer.Nome}}</h1>
-                    <p>---------------------------------------------</p>
                     <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
                         <p >R$: {{hamburguer.Preco}}  </p>     
                     </div>

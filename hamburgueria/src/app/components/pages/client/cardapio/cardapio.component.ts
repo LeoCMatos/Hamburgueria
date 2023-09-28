@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HamburguerService } from 'src/app/services/hamburguer.service';
 
+
 @Component({
   selector: 'app-cardapio',
   templateUrl: './cardapio.component.html',
@@ -32,8 +33,6 @@ constructor (private HamburguerService: HamburguerService) {}
     })
   }
 
-  
-  
   todos(){
     this.all = 1
     this.burger = 0
