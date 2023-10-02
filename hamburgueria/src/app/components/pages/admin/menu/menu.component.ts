@@ -10,17 +10,19 @@ export class MenuComponent {
 
   isCardapioPage = false
   isEditProdutoPage = false
+  isIngredientes =  false
 
   constructor(private router: Router){}
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
-      if(this.isCardapioPage === false && this.isEditProdutoPage === false ){
+      if(this.isCardapioPage === false && this.isEditProdutoPage === false && this.isIngredientes === false ){
         this.isCardapioPage = true 
       }
       if(event instanceof NavigationEnd){
         this.isCardapioPage = event.url === '/menu/edit-cardapio'
         this.isEditProdutoPage = event.url === '/menu/cadastrar-produto'
+        this.isIngredientes = event.url === '/menu/ingredientes'
       }
     })
   }

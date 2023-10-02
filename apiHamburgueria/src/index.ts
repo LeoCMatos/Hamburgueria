@@ -27,6 +27,7 @@ app.get('/ingredientes', ingredientesFunctions.getAllIngredientes )
 app.get('/ingredientes/:id', ingredientesFunctions.getIngrediente)
 app.post('/ingredientes', ingredientesFunctions.createIngrediente)
 app.put('/ingredientes/:id', ingredientesFunctions.updatedIngrendiente)
+app.delete('/ingredientes/:id', ingredientesFunctions.deleteIngrediente)
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);

@@ -1,0 +1,24 @@
+<div id="container-cardapio" *ngIf="ingredientes">
+    <div class="container-produto">
+       <div class="produto-img">
+           <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/7126739-icone-de-ponto-de-interrogacao-gratis-vetor.jpg" alt="">
+       </div>
+       <div class="info-produto">
+           <button id="ProdutoNovo" routerLink="/menu/cadastrar-produto">Adicionar Novo ingrediente</button>
+       </div>
+   </div>
+   <div *ngFor="let ingrediente of ingredientes">
+       <div class="container-produto">
+           <div class="produto-img">
+               <img src="{{ingrediente.img}}">
+           </div>
+           <div class="info-produto">
+               <h2>{{ingrediente.nome}}</h2>
+               <h3>R$:{{ingrediente.preco}} Kcal: {{ingrediente.calorias}}</h3>
+              <button class="edit">Editar</button>
+              <button class="delete">Deletar</button>
+           </div>
+       </div>
+   </div>
+
+</div>

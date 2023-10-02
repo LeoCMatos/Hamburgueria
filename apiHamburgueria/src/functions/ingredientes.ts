@@ -6,9 +6,11 @@ const app = express();
 app.use(bodyParser.json());
 
 interface ingrediente{
-    ID: number
-    nomeIngrediente: string
+    id: number
+    nome: string
     calorias: number
+    img: string
+    preco: number
 }
 
 const ingredientes: ingrediente[] = []
@@ -90,10 +92,28 @@ function updatedIngrendiente(req: Request, res: Response){
         }
     })
 }
+// Deletar ingredientes
+function deleteIngrediente (req: Request, res: Response){
+    const id = parseInt(req.params.id)
+
+    db.query('DELETE FROM ingredientes WHERE id = ?', [id], (error, results:any) => {
+        if(error){
+            console.log('Erro ao excluir o ingrediente>: ', error)
+            res.status(500).json({error: 'Erro interno do servidor'})
+        }
+
+        if(results.affectedRows > 0){
+            res.status(204).send()
+        }else{
+            res.status(404).json({message: 'Produto não encontrado'})
+        }
+    })
+}
 
 module.exports = {
     getAllIngredientes,
     createIngrediente,
     updatedIngrendiente,
-    getIngrediente
+    getIngrediente,
+    deleteIngrediente
 }
