@@ -93,18 +93,14 @@
     font-size: 1em;
 }
 
-#edit, #delete{
-    width: 30%;
-    border-radius: 10px;
-    margin: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.055);
-}
-
 #edit{
     background-color: blue;
     color: white;
     transition: 0.7s;
-
+    width: 30%;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.055);
 }
 
 #edit:hover{
@@ -130,19 +126,6 @@
     transition: 0.7s;
 }
 
-#delete{
-    background-color: red;
-    color: white;
-    transition: 0.7s;
-
-}
-
-#delete:hover{
-    background-color: white;
-    color: red;
-    border: 1px solid red;
-    transition: 0.7s;
-}
 
 @media screen and (max-width: 767px) {
 

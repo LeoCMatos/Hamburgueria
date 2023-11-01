@@ -9,6 +9,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { CardapioPageComponent } from './components/pages/client/cardapio-page/cardapio-page.component';
 import { ProdutoComponent } from './components/pages/client/produto/produto.component';
 import { IngredientesComponent } from './components/pages/admin/ingredientes/ingredientes.component';
+import { IngredientesEditComponent } from './components/pages/admin/ingredientes-edit/ingredientes-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -21,7 +22,8 @@ const routes: Routes = [
     {path: 'edit-cardapio', component: EditCardapioComponent},
     {path: 'cadastrar-produto', component: CadastrarProdutoComponent},
     {path: 'edit-produto/:id', component: EditProdutoComponent},
-    {path: 'ingredientes', component: IngredientesComponent}
+    {path: 'ingredientes', component: IngredientesComponent},
+    {path: 'ingredientes/:id', component: IngredientesEditComponent}
   ]}
 ];
 

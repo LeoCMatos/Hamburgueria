@@ -15,8 +15,7 @@
            <div class="info-produto">
                <h2>{{ingrediente.nome}}</h2>
                <h3>R$:{{ingrediente.preco}} Kcal: {{ingrediente.calorias}}</h3>
-              <button class="edit">Editar</button>
-              <button class="delete">Deletar</button>
+               <a routerLink="/menu/ingredientes/{{ingrediente.id}}" class="edit">Editar</a>
            </div>
        </div>
    </div>
