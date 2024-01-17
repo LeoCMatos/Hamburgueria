@@ -2,7 +2,7 @@
     <div class="container">
         <div class="texto">
             <h1>Cardapio</h1>
-            <p>Cardapio que vão conquistar o seu paladar!</p>
+            <p>O Cardapio que vai conquistar o seu paladar!</p>
         </div>
         <div >
             <ul class="container-navbar">
@@ -14,7 +14,7 @@
         </div>
         <div class="container-produtos" >
             <div class="card" [ngClass]="{'card-ativo': all}" *ngFor="let hamburguer of dadosLanches" routerLink="/produto/{{hamburguer.ID}}">
-                    <div *ngIf="hamburguer.Disponibilidade === 1">
+                    <div>
                         <img src={{hamburguer.Imagem}}>
                         <h1 class="title">{{hamburguer.Nome}}</h1>
                         <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
@@ -34,7 +34,7 @@
                     </div>
             </div>
             <div class="card" [ngClass]="{'card-ativo': all}" *ngFor="let hamburguer of dadosBebidas" routerLink="/produto/{{hamburguer.ID}}">
-                <div *ngIf="hamburguer.Disponibilidade === 1">
+                <div>
                     <img src={{hamburguer.Imagem}}>
                     <h1 class="title">{{hamburguer.Nome}}</h1>
                     <div class="linha" *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
@@ -54,7 +54,7 @@
                 </div>
             </div>   
             <div class="card" [ngClass]="{'card-ativo': all}" *ngFor="let hamburguer of dadosAcompanhamentos" routerLink="/produto/{{hamburguer.ID}}">
-                <div *ngIf="hamburguer.Disponibilidade === 1">
+                <div>
                     <img src={{hamburguer.Imagem}}>
                     <h1 class="title">{{hamburguer.Nome}}</h1>
                     <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
@@ -75,7 +75,7 @@
             </div>         
 
             <div class="card" [ngClass]="{'card-ativo': burger}" *ngFor="let hamburguer of dadosLanches">
-                <div *ngIf="hamburguer.Disponibilidade === 1">
+                <div>
                     <img src={{hamburguer.Imagem}}>
                     <h1 class="title">{{hamburguer.Nome}}</h1>
                     <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
@@ -96,7 +96,7 @@
             </div>
 
             <div class="card" [ngClass]="{'card-ativo': drinks}" *ngFor="let hamburguer of dadosBebidas">
-                <div *ngIf="hamburguer.Disponibilidade === 1">
+                <div>
                     <img src={{hamburguer.Imagem}}>
                     <h1 class="title">{{hamburguer.Nome}}</h1>
                     <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">
@@ -117,7 +117,7 @@
             </div>
 
             <div class="card" [ngClass]="{'card-ativo': addOns}" *ngFor="let hamburguer of dadosAcompanhamentos">
-                <div *ngIf="hamburguer.Disponibilidade === 1">
+                <div>
                     <img src={{hamburguer.Imagem}}>
                     <h1 class="title">{{hamburguer.Nome}}</h1>
                     <div *ngIf="hamburguer.Preco <  hamburguer.Promocao && hamburguer.Ativar_Promocao === 0  else promoAtiva">

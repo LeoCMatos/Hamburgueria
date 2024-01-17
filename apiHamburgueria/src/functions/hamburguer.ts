@@ -68,9 +68,9 @@ function getBurguer(req: Request, res: Response){
         }
     })
 }
-// pegar todo os lanches
+// pegar todo os lanches disponiveis
 function getAllLanches(req: Request, res: Response){
-    db.query("SELECT * FROM hamburguers where Categoria = 'Lanches'", (error,results) => {
+    db.query("SELECT * FROM hamburguers where Categoria = 'Lanches' and Disponibilidade = 1", (error,results) => {
         if(error){
             console.error('Erro ao buscar Lanches:', error)
             res.status(500).json({error: 'Erro interno do servidor'})
@@ -81,11 +81,11 @@ function getAllLanches(req: Request, res: Response){
     })
 }
 
-// pegar todas as bebidas
+// pegar todas as bebidas disponiveis
 
 
 function getAllBebidas(req: Request, res: Response){
-    db.query("SELECT * FROM hamburguers where Categoria = 'Bebidas'",(error,results) =>{
+    db.query("SELECT * FROM hamburguers where Categoria = 'Bebidas' and Disponibilidade = 1",(error,results) =>{
         if(error){
             console.log('Erro ao buscar Lanches:', error)
             res.status(500).json({Error: 'Erro interno do servidor'})
@@ -95,10 +95,10 @@ function getAllBebidas(req: Request, res: Response){
     })
 }
 
-//pegar todos os acompanhamentos
+//pegar todos os acompanhamentos  disponiveis
 
 function getAllAcompanhamentos(req: Request, res: Response){
-    db.query("SELECT * FROM hamburguers where Categoria = 'Acompanhamentos'",(error,results) =>{
+    db.query("SELECT * FROM hamburguers where Categoria = 'Acompanhamentos' and Disponibilidade = 1",(error,results) =>{
         if(error){
             console.log('Erro ao buscar Lanches:', error)
             res.status(500).json({Error: 'Erro interno do servidor'})
