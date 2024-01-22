@@ -27,6 +27,10 @@
     background-color: #FBBAAC;
 }
 
+.pesquisa{
+    width: 100%;
+}
+
 .dados-produto{
     align-items: center;
     justify-content: center;

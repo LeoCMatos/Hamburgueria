@@ -20,6 +20,16 @@
             </div>
         </div>
     </div>
+    <!-- Pesquisa-->
+    <div class="container-produto">
+        <div class="produto-img">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/7126739-icone-de-ponto-de-interrogacao-gratis-vetor.jpg" alt="">
+        </div>
+        <div class="info-produto">
+            <label class="pesquisa" for="text">Pesquisa</label>
+           <input class="barra-pesquisa" type="text">
+        </div>
+    </div>
 
     <div *ngFor="let hamburguer of dadosHamburguer">
         <div  *ngIf="hamburguer.NaoFinalizado === 1" class="container-produto">
