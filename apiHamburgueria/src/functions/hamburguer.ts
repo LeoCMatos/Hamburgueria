@@ -68,7 +68,9 @@ function getBurguer(req: Request, res: Response){
         }
     })
 }
+
 // pegar todo os lanches disponiveis
+
 function getAllLanches(req: Request, res: Response){
     db.query("SELECT * FROM hamburguers where Categoria = 'Lanches' and Disponibilidade = 1", (error,results) => {
         if(error){
@@ -82,7 +84,6 @@ function getAllLanches(req: Request, res: Response){
 }
 
 // pegar todas as bebidas disponiveis
-
 
 function getAllBebidas(req: Request, res: Response){
     db.query("SELECT * FROM hamburguers where Categoria = 'Bebidas' and Disponibilidade = 1",(error,results) =>{
@@ -108,7 +109,8 @@ function getAllAcompanhamentos(req: Request, res: Response){
     })
 }
 
-//criar novo hamburguer
+//criar novo produto
+
 function createBurguer(req: Request, res: Response) {
     const newHamburguer = req.body
     db.query('INSERT INTO hamburguers set ?', newHamburguer,(error, results) => {
@@ -128,6 +130,8 @@ function createBurguer(req: Request, res: Response) {
     })
 }
 
+// atualizar produto
+
 function updatedBurguer(req: Request, res: Response){
     const id = parseInt(req.params.id)
     const burguerUpdate = req.body
@@ -146,6 +150,8 @@ function updatedBurguer(req: Request, res: Response){
         }
     })
 }
+
+//deletar produto
 
 function deleteBurguer(req: Request, res: Response){
     const id = parseInt(req.params.id)

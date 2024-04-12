@@ -58,7 +58,7 @@ function createIngrediente(req: Request, res: Response){
     db.query('INSERT INTO ingredientes set ?', newIngrediente,(error, results) => {
         if(error){
             console.error('Erro ao criar um novo item:', error)
-            res.status(500).json({ error: 'Erro interno do servidor' });
+            res.status(500).json({ error: 'Erro interno do servidor' })
             return
         }
 
@@ -67,7 +67,7 @@ function createIngrediente(req: Request, res: Response){
             newIngrediente.ID = insertId
             res.status(201).json(newIngrediente); // Responda com o novo item criado
         } else {
-          res.status(500).json({ error: 'Erro interno do servidor' });
+            res.status(500).json({ error: 'Erro interno do servidor' })
         }
     })
 }
@@ -92,7 +92,9 @@ function updatedIngrendiente(req: Request, res: Response){
         }
     })
 }
+
 // Deletar ingredientes
+
 function deleteIngrediente (req: Request, res: Response){
     const id = parseInt(req.params.id)
 
